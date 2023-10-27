@@ -1,21 +1,41 @@
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+}
+
+.appheader {
+  height: 100px;
+  width: 100%;
+}
+
+.appdescription {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  width: 50%;
+  z-index: 2;
+  font-family: var(--font-mono);
+  padding: 20px;
+  margin: auto;
+  border: 1px solid black;
+  border-radius: 24px;
+}
+
+.loginDesc {
+  width: 100%;
+}
+
+.pagename {
+  color: red;
+  font-weight: 700;
 }
 
 .description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
-  font-size: 0.85rem;
-  max-width: var(--max-width);
-  width: 100%;
-  z-index: 2;
-  font-family: var(--font-mono);
+  width: 50%;
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 24px;
 }
 
 .description a {
@@ -97,16 +117,13 @@
 
 .center::before,
 .center::after {
-  content: '';
+  content: "";
   left: 50%;
   position: absolute;
   filter: blur(45px);
   transform: translateZ(0);
 }
 
-.logo {
-  position: relative;
-}
 /* Enable hover only on non-touch devices */
 @media (hover: hover) and (pointer: fine) {
   .card:hover {
@@ -206,16 +223,6 @@
 @media (min-width: 701px) and (max-width: 1120px) {
   .grid {
     grid-template-columns: repeat(2, 50%);
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .vercelLogo {
-    filter: invert(1);
-  }
-
-  .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
   }
 }
 

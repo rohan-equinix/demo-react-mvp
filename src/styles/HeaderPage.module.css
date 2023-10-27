@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 8vh;
+  background-color: bisque;
+  width: 100%;
+
+  .metalBox {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .searchBox {
+    margin-top: 15px;
+  }
+
+  .logo {
+    margin: 20px;
+  }
+
+  .logout {
+    font-size: 20px;
+    padding: 20px;
+  }
+}
