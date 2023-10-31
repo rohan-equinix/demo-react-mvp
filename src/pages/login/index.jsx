@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
-import styles from "../../styles/Home.module.css";
+import styles from "./login.module.css";
 import HeaderPage from "../header";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import axios from "axios";
 
@@ -23,12 +22,12 @@ const LoginPage = () => {
       .catch(function (error) {
         console.log(error);
       });
-    router.push("/dashboard");
+    router.push("/dashboard"); // We will remove this after authentication integration
   };
 
   return (
-    <main className={styles.main}>
-      <div className={styles.appheader}>
+    <main className="main">
+      <div className="appheader">
         <HeaderPage />
       </div>
       <div className={styles.loginDesc}>

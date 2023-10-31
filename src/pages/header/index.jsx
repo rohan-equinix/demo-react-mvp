@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import styles from "../../styles/HeaderPage.module.css";
+import styles from "./headerPage.module.css";
 import "../../../public/logo.svg";
 import Link from "next/link";
 import { useRouter } from "next/router";

@@ -1,17 +1,16 @@
 import React from "react";
 import HeaderPage from "../header";
 import Sidebar from "../sidebar";
-import styles from "../../styles/Home.module.css";
 
 const Acounts = () => {
   return (
-    <main className={styles.main}>
-      <div className={styles.appheader}>
+    <main className="main">
+      <div className="appheader">
         <HeaderPage />
         <Sidebar />
       </div>
-      <div className={styles.description}>
-        <h2 className={styles.pagename}>Latest Accounts</h2>
+      <div className="description">
+        <h2 className="pagename">Latest Accounts</h2>
         <hr />
         <table class="table">
           <thead>

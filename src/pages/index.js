@@ -1,5 +1,5 @@
 "use client";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/home.module.css";
 import "bootstrap/dist/css/bootstrap.min.css"; // Import bootstrap CSS
 import AboutPage from "./about";
 import HeaderPage from "./header";
