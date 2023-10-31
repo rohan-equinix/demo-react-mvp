@@ -4,6 +4,7 @@ import styles from "../../styles/Home.module.css";
 import HeaderPage from "../header";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import axios from "axios";
 
 const LoginPage = () => {
   const router = useRouter();
@@ -11,6 +12,17 @@ const LoginPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     localStorage.setItem("email", e.target.exampleInputEmail1.value);
+    axios
+      .post("kaui/sign_in", {
+        username: e.target.exampleInputEmail1.value,
+        password: e.target.exampleInputPassword1.value,
+      })
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
     router.push("/dashboard");
   };
 
@@ -19,7 +31,7 @@ const LoginPage = () => {
       <div className={styles.appheader}>
         <HeaderPage />
       </div>
-      <div className={styles.description}>
+      <div className={styles.loginDesc}>
         <h2 className={styles.pagename}>Login</h2>
         <hr />
         <form onSubmit={handleSubmit}>
@@ -31,6 +43,7 @@ const LoginPage = () => {
               className="form-control"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
+              required
             />
           </div>
           <div className="mb-3">
@@ -41,8 +54,10 @@ const LoginPage = () => {
               type="password"
               className="form-control"
               id="exampleInputPassword1"
+              required
             />
           </div>
+          <br></br>
           <button type="submit" className="btn btn-primary">
             Submit
           </button>

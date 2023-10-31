@@ -26,9 +26,15 @@ const HeaderPage = () => {
             <img src="logo.svg" alt="equinix-metal" />
           </Link>
         </div>
-        <div className={styles.searchBox}>
-          <input className="form-control" type="search" placeholder="Search" />
-        </div>
+        {email && (
+          <div className={styles.searchBox}>
+            <input
+              className="form-control"
+              type="search"
+              placeholder="Search"
+            />
+          </div>
+        )}
       </section>
       {email && (
         <div className={styles.logout} onClick={logout}>

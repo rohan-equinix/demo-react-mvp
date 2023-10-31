@@ -1,32 +1,21 @@
 import Link from "next/link";
 import styles from "../../styles/Home.module.css";
 import HeaderPage from "../header";
+import Sidebar from "../sidebar";
 import React from "react";
+import AboutPage from "../about";
 
 const Dashboard = () => {
   return (
     <main className={styles.main}>
       <div className={styles.appheader}>
         <HeaderPage />
+        <Sidebar />
       </div>
       <div className={styles.description}>
         <h2 className={styles.pagename}>My Dashboard</h2>
         <hr />
-        <Link href="/dashboard/accounts">
-          <div className={styles.card}>
-            <h3>Accounts</h3>
-          </div>
-        </Link>
-        <Link href="/dashboard/invoices">
-          <div className={styles.card}>
-            <h3>Invoices</h3>
-          </div>
-        </Link>
-        <Link href="/dashboard/payments">
-          <div className={styles.card}>
-            <h3>Payments</h3>
-          </div>
-        </Link>
+        <AboutPage />
       </div>
     </main>
   );
